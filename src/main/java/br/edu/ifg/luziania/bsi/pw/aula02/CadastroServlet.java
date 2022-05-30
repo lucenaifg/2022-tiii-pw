@@ -38,7 +38,6 @@ public class CadastroServlet extends HttpServlet {
         request.getSession().setAttribute("pessoas",pessoas);
         request.getSession().setAttribute("nome", pessoa.getNome());
 
-        request.setAttribute("salvo", true);
         getServletContext()
                 .getRequestDispatcher("/aula02/cadastro.jsp")
                 .forward(request, response);

@@ -7,8 +7,8 @@
     <body>
         <h1>Seleciona a aula</h1><br>
         <div style="font-size: xx-large;">
-            <a href="aula01">Meu primeiro Servlet</a><br>
-            <a href="aula02">Trabalhando com Sessão</a>
+            <a href="aula01">Aula 01 - Meu primeiro Servlet</a><br>
+            <a href="aula02">Aula 02 - Trabalhando com Sessão</a>
         </div>
     </body>
 </html>
