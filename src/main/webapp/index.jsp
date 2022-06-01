@@ -9,7 +9,7 @@
         <div style="font-size: xx-large;">
             <a href="aula01">Aula 01 - Meu primeiro Servlet</a><br>
             <a href="aula02">Aula 02 - Trabalhando com Sessão</a><br>
-            <a href="api/ok">Aula 03 - Trabalhando com JAX-RS</a>
+            <a href="api/aula03">Aula 03 - Trabalhando com JAX-RS</a>
         </div>
     </body>
 </html>
