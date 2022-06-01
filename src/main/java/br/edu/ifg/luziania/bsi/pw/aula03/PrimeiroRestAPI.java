@@ -6,7 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-@Path("")
+@Path("primeiro")
 public class PrimeiroRestAPI {
 
     @GET
@@ -15,6 +15,7 @@ public class PrimeiroRestAPI {
     public Response getOk() {
         return Response.ok("OK").build();
     }
+
     @GET
     @Path("ok/{nome}")
     @Produces("text/plain")

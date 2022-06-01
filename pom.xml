@@ -7,7 +7,7 @@
     <groupId>br.edu.ifg.luziania.bsi</groupId>
     <artifactId>pw</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Aula 01 - Servlet</name>
+    <name>Curso Programação para WEB</name>
     <packaging>war</packaging>
 
     <properties>
@@ -17,6 +17,7 @@
     </properties>
 
     <dependencies>
+        <!-- Dependências Servlet e JSP       -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -24,28 +25,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>8.0.1</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.200</version>
-        </dependency>
+        <!-- Dependências JAX-RS  -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-servlet-initializer</artifactId>
