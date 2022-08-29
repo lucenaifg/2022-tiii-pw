@@ -1,3 +1,14 @@
+function getRequest(url, dto){
+    return new Request(window.location.origin+url, {
+        method: 'POST',
+        headers: new Headers({
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(dto)
+    });
+}
+
 function getFormDTO(){
     let url =  window.location.origin + "/pessoa/cadastro/formdata"
     fetch(url)
@@ -26,3 +37,23 @@ function populateSelect(obj){
 }
 
 getFormDTO();
+
+function getDTO(){
+    return {
+        "nome": document.getElementById("nomeInput").value,
+        "email": document.getElementById("emailInput").value,
+        "sexo": document.getElementById("sexoSelect").value
+    }
+}
+
+function save(){
+    fetch(getRequest("/pessoa/cadastro/save", getDTO()))
+        .then(response => response.json()) // solicitando o tipo de dado da resposta (promessa)
+        .then(function(dto) { // recebendo o dado da resposta
+            console.log(dto)
+            alert(JSON.stringify(dto));
+        })
+        .catch(function(error) {
+            console.error(error);
+        });
+}

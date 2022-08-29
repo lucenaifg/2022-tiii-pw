@@ -1,11 +1,25 @@
-package br.edu.ifg.luziania.tiii.model.dto;
+package br.edu.ifg.luziania.tiii.model.entity;
 
-public class PessoaDTO {
+
+import br.edu.ifg.luziania.tiii.model.dto.PessoaDTO;
+
+public class Pessoa {
 
     private Integer id;
     private String nome;
-    private String email;
     private String sexo;
+
+    public Pessoa(){
+    }
+    public Pessoa(PessoaDTO dto){
+        this(dto.getId(), dto.getNome(), dto.getSexo());
+    }
+
+    public Pessoa(Integer id, String nome, String sexo) {
+        this.id = id;
+        this.nome = nome;
+        this.sexo = sexo;
+    }
 
     public Integer getId() {
         return id;
@@ -21,14 +35,6 @@ public class PessoaDTO {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getSexo() {
