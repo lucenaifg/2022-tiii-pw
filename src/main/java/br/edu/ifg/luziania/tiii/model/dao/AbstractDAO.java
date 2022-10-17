@@ -1,6 +1,9 @@
 package br.edu.ifg.luziania.tiii.model.dao;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 public abstract class AbstractDAO<T> {
@@ -42,7 +45,7 @@ public abstract class AbstractDAO<T> {
     }
 
     public abstract void createTable();
-    public abstract void insert(T entity) throws SQLException;
+    public abstract void insert(T entity);
     public abstract void delete(T entity);
     public abstract void update(T entity);
     public abstract T getById(T entity);

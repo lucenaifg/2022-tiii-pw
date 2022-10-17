@@ -23,6 +23,16 @@ public class PessoaBO {
 
     public Boolean save(PessoaDTO dto) {
         pessoaDAO.insert(new Pessoa(dto));
+        pessoaDAO.save(dto);
+
+
+        boolean a = true;
+
+        if(a){
+
+        }
+
+
         return true;
     }
 }

@@ -62,6 +62,10 @@
       <artifactId>h2</artifactId>
       <version>1.4.200</version>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

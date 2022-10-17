@@ -2,6 +2,7 @@ package br.edu.ifg.luziania.tiii.model.dao.impl;
 
 
 import br.edu.ifg.luziania.tiii.model.dao.AbstractDAO;
+import br.edu.ifg.luziania.tiii.model.dto.PessoaDTO;
 import br.edu.ifg.luziania.tiii.model.entity.Pessoa;
 
 import javax.annotation.PostConstruct;
@@ -60,11 +61,6 @@ public class PessoaDAO extends AbstractDAO<Pessoa> {
     @Override
     public void update(Pessoa entity) {
         StringBuilder sql = new StringBuilder();
-        // language=SQL
-        sql.append("UPDATE PESSOA SET ")
-                .append("nome = '"+entity.getNome()+"', ")
-                .append("sexo = '"+entity.getSexo()+"',")
-                .append("WHERE id = "+entity.getId()+";");
         try {
             // language=SQL
             PreparedStatement ps = preparedStatement("UPDATE PESSOA SET nome = ?, sexo = ? WHERE id = ?;");
@@ -121,5 +117,9 @@ public class PessoaDAO extends AbstractDAO<Pessoa> {
         }
         close();
         return pessoas;
+    }
+
+    public void save(PessoaDTO dto) {
+
     }
 }
